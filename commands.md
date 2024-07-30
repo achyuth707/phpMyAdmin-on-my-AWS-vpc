@@ -20,6 +20,20 @@ sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \; --
 
 find /var/www -type f -exec sudo chmod 0664 {} \; -- To add group write permissions, recursively change the file permissions of /var/www and its subdirectories.
 
+Add below proxy in /etc/httpd/conf/httpd.conf file
+
+<VirtualHost *:80>
+
+    ProxyRequests Off
+    ProxyPass /phpMyAdmin http://172.20.3.233/phpMyAdmin/
+    ProxyPassReverse /phpMyAdmin http://172.20.3.233/phpMyAdmin/
+
+    <Proxy *>
+        Order deny,allow
+        Allow from all
+    </Proxy>
+</VirtualHost>
+
 ======= Install phpMyAdmin on App Server
 
 sudo yum install php-mbstring php-xml php php-mysqlnd -y
