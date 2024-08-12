@@ -1,4 +1,4 @@
-======= Install httpd server on both EC2 Instances (Web & App Server)
+## Install httpd server on both EC2 Instances (Web & App Server)
 
 sudo yum install -y httpd
 
