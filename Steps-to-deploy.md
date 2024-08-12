@@ -25,8 +25,7 @@ Installing and configuring phpMyAdmin on an EC2 instance.
 
 • Create three private subnets:
 
-        One for the backend application.
-        Two for the database instances.
+One for the backend application & Two for the database instances.
 
 3. Configure Route Tables
 
@@ -50,13 +49,11 @@ Update the route table for the public subnet to route internet traffic through t
 
 Web Server Instance:
     
-    Launch an EC2 instance in the public subnet.
-    Install and configure an HTTPD web server.
+Launch an EC2 instance in the public subnet, Install and configure an HTTPD web server.
     
 Backend EC2 Instance:
     
-    Launch an EC2 instance in one of the private subnets.
-    Install and configure HTTPD and phpMyAdmin on this instance.
+Launch an EC2 instance in one of the private subnets, Install and configure HTTPD & phpMyAdmin on backend instance.
 
 7. Set Up RDS MySQL Instance
 
